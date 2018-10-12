@@ -1,0 +1,45 @@
+.Modulation-container {
+  height: 4vmin;
+  width: 22vmin;
+  background-color: #61dafb69;
+  color: #fff;
+  text-align: center;
+  font-size: 2.5vmin;
+  padding: 1.3vmin .5vmin;
+  border-width: 0.2vmin;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+  margin: auto;
+}
+
+.Modulation-minus span, .Modulation-plus span {
+  font-size: 1.5vmin;
+}
+.Modulation-minus {
+  width: 6vmin;
+  float: left;
+}
+ .Modulation-plus {
+  width: 6.7vmin;
+  float: left;
+}
+
+.Modulation-button {
+  background: none;
+  border: none;
+  color: #fff;
+  width: auto;
+  padding: .5vmin;
+  font-size: 1.5vmin;
+}
+.Modulation-input {
+  font-size: 4vmin;
+  background: none;
+  border: none;
+  color: #fff;
+  width: 8.5vmin;
+  float: left;
+  text-align: center;
+  padding-left: 1vmin;
+}

@@ -1,0 +1,21 @@
+.Executors-div {
+  height: 4vmin;
+  width: 16vmin;
+  background-color: #61dafb69;
+  color: #fff;
+  padding: 1vmin;
+  text-align: center;
+  font-size: 3.5vmin;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+  margin: auto;
+  margin-bottom: 0;
+}
+.Executor-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3.5vmin;
+}

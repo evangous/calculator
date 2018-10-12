@@ -1,0 +1,17 @@
+.Result-div {
+  height: 4vmin;
+  width: auto;
+  min-width: 15vmin;
+  background-color: #61dafb69;
+  color: #fff;
+  font-size: 4vmin;
+  padding: 1vmin;
+  text-align: center;
+  font-size: 3.5vmin;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+  margin: auto;
+  margin-bottom: 0;
+}
