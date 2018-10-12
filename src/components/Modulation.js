@@ -10,7 +10,7 @@ class Modulation extends React.Component {
           <span>|</span>
           <button type="button" className="Modulation-button"> -10 </button>
         </div>
-        <input type="number" className="Modulation-input" value="5" />
+        <div className="Modulation-input">5</div>
         <div className="Modulation-plus">
           <button type="button" className="Modulation-button"> +1 </button>
           <span>|</span>
@@ -18,7 +18,7 @@ class Modulation extends React.Component {
         </div>
       </div>
     );
-  }
+  } 
 
 }
 
