@@ -5,7 +5,7 @@ class Input extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      number: ''
+      number: 0
     }
     this.handleChange = this.handleChange.bind(this)
   }

@@ -1,4 +1,9 @@
-.Executors-div {
+.Operators-container {
+  width: 33.33%;
+  text-align: center;
+  display: flex;
+}
+.Operators-div {
   height: 4vmin;
   width: 17vmin;
   background-color: #61dafb69;
@@ -13,9 +18,9 @@
   margin: auto;
   margin-bottom: 0;
 }
-.Executor-button {
+.Operator-button {
   background: none;
   border: none;
   color: #fff;
-  font-size: 3.5vmin;
+  font-size: 3vmin;
 }

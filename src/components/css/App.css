@@ -21,17 +21,6 @@
   width: 100%;
   display: flex;
 }
-.Label-input-container {
-  display: grid;
-  width: 33.33%;
-  text-align: center;
-  font-size: 2.5vmin;
-}
-.Executors-container {
-  width: 33.33%;
-  text-align: center;
-  display: flex;
-}
 
 .Middle-container {
   margin: 10vmin;
@@ -41,4 +30,28 @@
   width: 100%;
   text-align: center;
   display: grid;
+}
+.Label-input-container {
+  display: grid;
+  width: 33.33%;
+  text-align: center;
+  font-size: 2.5vmin;
+}
+
+.Clear-button {
+  height: 6vmin;
+  width: 15vmin;
+  background-color: #61dafb69;
+  color: #fff;
+  padding: 1vmin;
+  text-align: center;
+  font-size: 2.5vmin;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+  margin: auto;
+  margin-bottom: 0;
+  top: 6vmin;
+  position: relative;
 }

@@ -5,15 +5,16 @@ class Modulation extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      number: this.props.number
+      numberState: this.props.numberProp
     }
   }
   modulateNumber = (event) => {
-    console.log(this.state.number)
+    console.log(this.state.numberState)
     this.setState({
-      number: eval(this.state.number+event.target.innerText)
+      numberState: eval(this.state.numberState+event.target.innerText)
     })
-    // this.props.number = eval(this.props.number+event.target.innerText)
+    // this.props.numberProp( eval(this.props.numberProp+event.target.innerText) )
+    // this.props.handlerFromParant(event.target.innerText);
   }
   render() {
     return (
@@ -23,7 +24,7 @@ class Modulation extends React.Component {
           <span>|</span>
           <button type="button" className="Modulation-button" onClick={this.modulateNumber}> -10 </button>
         </div>
-        <div className="Modulation-input"> {this.state.number ? this.state.number : this.props.number} </div>
+        <div className="Modulation-input"> {this.state.numberState ? this.state.numberState : this.props.numberProp} </div>
         <div className="Modulation-plus">
           <button type="button" className="Modulation-button" onClick={this.modulateNumber}> +1 </button>
           <span>|</span>
