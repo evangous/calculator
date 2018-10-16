@@ -21,14 +21,11 @@ class App extends Component {
     }
   }
   initState(){
-    console.log(this.state);
     this.setState({
       numberOne: 0,
       numberTwo: 0,
       operator: '+'
     })
-    // this.handleNumberOne = 0
-    // this.handleNumberTwo = 0
   }
   handleNumberOne(num) {
     this.setState({
@@ -52,21 +49,21 @@ class App extends Component {
         <div className="Top-container">
           <div className="Label-input-container">
             Νο 1
-            <Input numberHandler={this.handleNumberOne} />
+            <Input number={this.state.numberOne} numberHandler={this.handleNumberOne} />
           </div>
           <Operators operatorHandler={this.handleOperator} />
           <div className="Label-input-container">
             Νο 2
-            <Input numberHandler={this.handleNumberTwo} />
+            <Input number={this.state.numberTwo} numberHandler={this.handleNumberTwo} />
           </div>
         </div>
         <div className="Middle-container">
           <Result numberOne={this.state.numberOne} numberTwo={this.state.numberTwo} operator={this.state.operator} />
         </div>
         <div className="Bottom-container">
-          <Modulation numberProp={this.state.numberOne} handlerFromParant />
+          <Modulation number={this.state.numberOne} numberHandler={this.handleNumberOne} />
           <button type="button" className="Clear-button" onClick={ () => this.initState() }> Clear All </button>
-          <Modulation numberProp={this.state.numberTwo} handlerFromParant />
+          <Modulation number={this.state.numberTwo} numberHandler={this.handleNumberTwo} />
         </div>
       </div>
     );
@@ -74,3 +71,15 @@ class App extends Component {
 }
 
 export default App;
+
+
+/*
+1. on change input number reset +-1| +-10                     OK
+2. on change numbers change input number                      OK
+3. on clear reset input numbers                               OK
+4. map inputs | make it work for more than two numbers
+5. map modulations
+6. add validation check for not-allowed calculations
+7. if negative add parenthesis                                OK
+8. operators map with | but not in the end
+*/
