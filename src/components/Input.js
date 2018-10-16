@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './css/Input.css';
 
-class Input extends React.Component {
+class Input extends Component {
   constructor(props) {
     super(props)
     this.state = {

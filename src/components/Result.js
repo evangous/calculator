@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './css/Result.css';
 
-class Result extends React.Component {
+class Result extends Component {
   constructor(props) {
     super(props)
   }
