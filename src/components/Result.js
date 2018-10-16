@@ -6,9 +6,16 @@ class Result extends Component {
     super(props)
   }
   render() {
+    const numberOne = this.props.numberOne
+    const numberTwo = this.props.numberTwo
+    const operator = this.props.operator
+    const result = eval( String(this.props.numberOne+' '+this.props.operator+' '+this.props.numberTwo) )
     return (
-      <div className="Result-div">
-        {this.props.numberOne} + {this.props.numberTwo} = 12
+      <div className="Result-container">
+        Result
+        <div className="Result-div">
+          {numberOne} {operator} {numberTwo} = {result}
+        </div>
       </div>
     );
   }
