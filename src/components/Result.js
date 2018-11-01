@@ -1,21 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './css/Result.css';
 
 class Result extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
-    const numberOne = this.props.numberOne
-    const numberTwo = this.props.numberTwo
+    const numberOne = this.props.numbers[0]
+    const numberTwo = this.props.numbers[1]
     const operator = this.props.operator
-    // const result = eval( String(this.props.numberOne+' '+this.props.operator+' '+this.props.numberTwo) )
-    const result = eval( `${this.props.numberOne} ${this.props.operator} ${this.props.numberTwo}` )
+    let result = eval( `${numberOne} ${operator} ${numberTwo}` )
+    if (isNaN(result)){
+      result = 'error'
+    } else if (result % 1 > 0 ){
+      result = Math.round(result * 100) / 100
+    }
+    const className = (result==='error') ? 'error' : ''
     return (
-      <div className="Result-container">
-        Result
-        <div className="Result-div">
-          { numberOne<0 ? `(${numberOne})` : numberOne } {operator} {numberTwo} = {result}
+      <div className="Result-div">
+        <div className="Result-label">Result</div>
+        <div className={className}>
+          { numberOne<0 ? `(${numberOne})` : numberOne }
+          {operator}
+          { numberTwo<0 ? `(${numberTwo})` : numberTwo }
+          =
+          {result}
         </div>
       </div>
     );

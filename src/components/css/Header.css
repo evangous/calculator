@@ -1,13 +1,21 @@
 .App-header {
   display: flex;
   top: 3vmin;
-  position: absolute;
+  margin: auto;
+  padding: 25px;
 }
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 10vmin;
 }
+.App-link {
+  color: #61dafb;
+}
+.App-h5 {
+  color: #61dafb;
+  margin: auto;
+}
+
 
 @keyframes App-logo-spin {
   from {

@@ -11,59 +11,54 @@ import Modulation from './Modulation';
 class App extends Component {
   constructor() {
     super()
-    this.handleNumberOne = this.handleNumberOne.bind(this)
-    this.handleNumberTwo = this.handleNumberTwo.bind(this)
-    this.handleOperator = this.handleOperator.bind(this)
     this.state = {
-      numberOne : 0,
-      numberTwo : 0,
+      numbers : [0, 0],
       operator: '+'
     }
   }
   initState(){
     this.setState({
-      numberOne: 0,
-      numberTwo: 0,
+      numbers : [0, 0],
       operator: '+'
     })
   }
-  handleNumberOne(num) {
-    this.setState({
-      numberOne: num
-    })
+  handleNumber(number,index){
+    let numbers = this.state.numbers
+    numbers[index] = number
+    this.setState({numbers})
   }
-  handleNumberTwo(num) {
+  handleOperator(operator){
     this.setState({
-      numberTwo: num
-    })
-  }
-  handleOperator(data) {
-    this.setState({
-      operator: data
+      operator: operator
     })
   }
   render() {
+    const inputs = this.state.numbers.map((number,index) =>
+      <div className={"Label-input-container"} key={index}>
+         Νο {index+1}
+         <Input key={index} number={this.state.numbers[index]} numberHandler={(number) => this.handleNumber( number, index)} />
+      </div>
+    )
+    const modulation = this.state.numbers.map((number,index) =>
+      <Modulation number={this.state.numbers[index]} numberHandler={(number) => this.handleNumber( number, index)} key={index} />
+    )
+    const numbers = this.state.numbers
+    const operator = this.state.operator
     return (
       <div className="App">
         <Header />
-        <div className="Top-container">
-          <div className="Label-input-container">
-            Νο 1
-            <Input number={this.state.numberOne} numberHandler={this.handleNumberOne} />
+        <div className="Main-container">
+          <div className="Inputs-container">
+            {inputs}
           </div>
-          <Operators operatorHandler={this.handleOperator} />
-          <div className="Label-input-container">
-            Νο 2
-            <Input number={this.state.numberTwo} numberHandler={this.handleNumberTwo} />
+          <Operators operatorHandler={(operator) => this.handleOperator(operator)} />
+          <div className="Modulation-container">
+            {modulation}
           </div>
-        </div>
-        <div className="Middle-container">
-          <Result numberOne={this.state.numberOne} numberTwo={this.state.numberTwo} operator={this.state.operator} />
-        </div>
-        <div className="Bottom-container">
-          <Modulation number={this.state.numberOne} numberHandler={this.handleNumberOne} />
-          <button type="button" className="Clear-button" onClick={ () => this.initState() }> Clear All </button>
-          <Modulation number={this.state.numberTwo} numberHandler={this.handleNumberTwo} />
+          <div className="Right-container">
+            <Result numbers={numbers} operator={operator} />
+            <button type="button" className="Clear-button" onClick={ () => this.initState() }> Clear All </button>
+          </div>
         </div>
       </div>
     );
@@ -77,9 +72,11 @@ export default App;
 1. on change input number reset +-1| +-10                     OK
 2. on change numbers change input number                      OK
 3. on clear reset input numbers                               OK
-4. map inputs | make it work for more than two numbers
-5. map modulations
-6. add validation check for not-allowed calculations
-7. if negative add parenthesis                                OK
-8. operators map with | but not in the end
+4. map inputs | make it work for more than two numbers        OK
+5. map modulations                                            OK
+6. calc result with dynamic numbers length
+7. add validation check for not-allowed calculations          OK
+8. if negative add parenthesis                                OK
+9. operators map                                              ΟΚ
+10. if decimal, round in second digit                         OK
 */

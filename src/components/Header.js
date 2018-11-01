@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from '../logo.svg';
 import './css/Header.css';
 
 
-class Header extends Component {
+class Header extends React.Component {
   render() {
     return (
       <header className="App-header">

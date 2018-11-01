@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './css/Modulation.css';
 
 class Modulation extends React.Component {
@@ -20,7 +20,7 @@ class Modulation extends React.Component {
   render() {
     this.numberValue = Number(this.props.number)
     return (
-      <div className="Modulation-container">
+      <div className="Modulation-div">
         <div className="Modulation-minus">
           <button type="button" className="Modulation-button" onClick={this.modulateNumber}> -1 </button>
           <span>|</span>

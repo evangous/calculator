@@ -1,14 +1,9 @@
-.Operators-container {
-  width: 33.33%;
-  text-align: center;
-  display: flex;
-}
 .Operators-div {
   height: 4vmin;
   width: 19vmin;
   background-color: #61dafb69;
   color: #fff;
-  padding: 1vmin 0;
+  padding: 1vmin 0 2.5vmin 0;
   text-align: center;
   font-size: 3.5vmin;
   border-width: 2px;
@@ -16,7 +11,6 @@
   border-color: initial;
   border-image: initial;
   margin: auto;
-  margin-bottom: 0;
 }
 .Operator-button {
   background: none;

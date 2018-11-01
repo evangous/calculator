@@ -1,46 +1,54 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#root {
+  height: 100%;
+}
+
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  font-size: calc(10px + 2vmin);
+  color: white;
   background-color: #282c34;
-  min-height: 100vh;
+  text-align: center;
+}
+
+.Main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.Inputs-container, .Operators-container, .Modulation-container, .Right-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-.App-h5 {
-  color: #61dafb;
-}
-
-.Top-container, .Middle-container, .Bottom-container {
-  width: 100%;
-  display: flex;
-}
-
-.Middle-container {
-  margin: 10vmin;
-  font-size: 2.5vmin;
-}
-.Result-container {
-  width: 100%;
   text-align: center;
-  display: grid;
+  width: 25%;
+  height: 100%;
 }
+
 .Label-input-container {
   display: grid;
-  width: 33.33%;
+  width: 100%;
   text-align: center;
   font-size: 2.5vmin;
+  margin: auto;
 }
 
 .Clear-button {
   height: 6.5vmin;
-  width: 19vmin;
+  width: 22.5vmin;
   background-color: #61dafb69;
   color: #fff;
   padding: 1vmin;
@@ -50,8 +58,6 @@
   border-style: inset;
   border-color: initial;
   border-image: initial;
-  margin: auto;
-  margin-bottom: 0;
-  top: 6vmin;
+  margin-top: 5%;
   position: relative;
 }
